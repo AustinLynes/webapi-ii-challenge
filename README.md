@@ -85,7 +85,7 @@ Configure the API to handle to the following routes:
 #### Endpoint Specifications
 
 When the client makes a `POST` request to `/api/posts`:
-
+[x]
 - If the request body is missing the `title` or `contents` property:
 
   - cancel the request.
@@ -128,14 +128,14 @@ When the client makes a `POST` request to `/api/posts/:id/comments`:
   - return the following JSON object: `{ error: "There was an error while saving the comment to the database" }`.
 
 When the client makes a `GET` request to `/api/posts`:
-
+[x]
 - If there's an error in retrieving the _posts_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The posts information could not be retrieved." }`.
 
 When the client makes a `GET` request to `/api/posts/:id`:
-
+[x]
 - If the _post_ with the specified `id` is not found:
 
   - return HTTP status code `404` (Not Found).
@@ -159,7 +159,7 @@ When the client makes a `GET` request to `/api/posts/:id/comments`:
   - return the following JSON object: `{ error: "The comments information could not be retrieved." }`.
 
 When the client makes a `DELETE` request to `/api/posts/:id`:
-
+[x]
 - If the _post_ with the specified `id` is not found:
 
   - return HTTP status code `404` (Not Found).
@@ -171,7 +171,7 @@ When the client makes a `DELETE` request to `/api/posts/:id`:
   - return the following JSON object: `{ error: "The post could not be removed" }`.
 
 When the client makes a `PUT` request to `/api/posts/:id`:
-
+[x]
 - If the _post_ with the specified `id` is not found:
 
   - return HTTP status code `404` (Not Found).
